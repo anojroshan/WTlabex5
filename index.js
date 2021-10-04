@@ -16,5 +16,6 @@ var server = http.createServer(function(req,res){
     })
 
 });
-server.listen(3000);
-console.log("Server running");
+server.listen(process.env.PORT || 3000, function(){
+  console.log("server running");
+});
